@@ -9,7 +9,7 @@
 	"scripts": {
 		"start": "pnpm compile && node ./dist/index.js",
 		"compile": "tsc",
-		"dev": "nodemon --watch --ignore ./dist",
+		"dev": "tsx --watch src/index.ts",
 		"lint": "eslint ./src --ext .ts; tsc --noEmit",
 		"generate:types": "gql-gen --config codegen.ts"
 	},
@@ -25,10 +25,9 @@
 		"@types/node": "^20.6.3",
 		"eslint-config-custom": "workspace:*",
 		"graphql-codegen-typescript-common": "0.18.2",
-		"nodemon": "^3.0.1",
 		"rimraf": "^5.0.1",
-		"ts-node": "^10.9.1",
 		"tsconfig": "workspace:*",
+		"tsx": "^3.13.0",
 		"typescript": "^5.2.2"
 	}
 }
