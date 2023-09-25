@@ -1,0 +1,31 @@
+{
+	"name": "backend",
+	"version": "1.0.0",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"start": "pnpm compile && node ./dist/index.js",
+		"compile": "tsc",
+		"dev": "nodemon --watch --ignore ./dist",
+		"lint": "eslint ./src --ext .ts; tsc --noEmit",
+		"generate:types": "gql-gen --config codegen.ts"
+	},
+	"dependencies": {
+		"@apollo/server": "^4.9.3",
+		"graphql": "^16.8.1"
+	},
+	"devDependencies": {
+		"@graphql-codegen/add": "^5.0.0",
+		"@graphql-codegen/cli": "^5.0.0",
+		"@graphql-codegen/typescript": "^4.0.1",
+		"@graphql-codegen/typescript-resolvers": "^4.0.1",
+		"@types/node": "^20.6.3",
+		"eslint-config-custom": "workspace:*",
+		"graphql-codegen-typescript-common": "0.18.2",
+		"nodemon": "^3.0.1",
+		"rimraf": "^5.0.1",
+		"ts-node": "^10.9.1",
+		"tsconfig": "workspace:*",
+		"typescript": "^5.2.2"
+	}
+}

@@ -1,18 +1,33 @@
 {
-  "$schema": "https://turbo.build/schema.json",
-  "globalDependencies": ["**/.env.*local"],
-  "pipeline": {
-    "build": {
-      "outputs": ["dist/**", ".next/**", "!.next/cache/**"],
-      "dependsOn": ["^build"]
-    },
-    "dev": {
-      "cache": false,
-      "persistent": true
-    },
-    "lint": {},
-    "clean": {
-      "cache": false
-    }
-  }
+	"$schema": "https://turbo.build/schema.json",
+	"globalDependencies": ["**/.env.*local"],
+	"globalDotEnv": [".env"],
+	"pipeline": {
+		"build": {
+			"outputs": ["dist/**"],
+			"dependsOn": ["^generate:types", "^build"]
+		},
+		"dev": {
+			"dependsOn": ["^generate:types"],
+			"cache": false,
+			"persistent": true
+		},
+		"lint": {
+			"cache": false
+		},
+		"clean": {
+			"cache": false
+		},
+		"generate:types": {
+			"cache": false,
+			"outputs": ["src/types/graphql.ts"]
+		},
+		"db:push": {
+			"cache": false
+		},
+		"studio": {
+			"cache": false,
+			"persistent": true
+		}
+	}
 }

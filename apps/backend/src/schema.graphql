@@ -1,0 +1,9 @@
+type Query {
+	hello: String
+	# fast(id: ID!): Fast
+}
+
+type Fast {
+	id: ID!
+	name: String!
+}
