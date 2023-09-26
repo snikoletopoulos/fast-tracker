@@ -2,18 +2,18 @@
 
 <!--toc:start-->
 
-- [Overview](#overview)
-- [Purpose](#purpose)
-- [Installation](#installation)
-  - [1. Clone the Repository](#1-clone-the-repository)
-  - [2. Navigate to the Project Directory](#2-navigate-to-the-project-directory)
-- [Install Dependencies](#install-dependencies)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [Issues and Support](#issues-and-support)
-- [License](#license)
-- [Thank You](#thank-you)
-
+- Table of Content
+  - [Overview](#overview)
+  - [Purpose](#purpose)
+  - [Installation](#installation)
+    - [1. Clone the Repository](#1-clone-the-repository)
+    - [2. Navigate to the Project Directory](#2-navigate-to-the-project-directory)
+  - [Install Dependencies](#install-dependencies)
+  - [Usage](#usage)
+  - [Contributing](#contributing)
+  - [Issues and Support](#issues-and-support)
+  - [License](#license)
+  - [Thank You](#thank-you)
   <!--toc:end-->
 
 ## Overview
