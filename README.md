@@ -1,4 +1,20 @@
-# Fasting Tracker Mobile Application - GitHub Repository
+# Fast Tracker Mobile Application
+
+<!--toc:start-->
+
+- [Fast Tracker Mobile Application - GitHub Repository](#fast-tracker-mobile-application)
+  - [Overview](#overview)
+  - [Purpose](#purpose)
+  - [Installation](#installation)
+    - [1. Clone the Repository](#1-clone-the-repository)
+    - [2. Navigate to the Project Directory](#2-navigate-to-the-project-directory)
+  - [Install Dependencies](#install-dependencies)
+  - [Usage](#usage)
+  - [Contributing](#contributing)
+  - [Issues and Support](#issues-and-support)
+  - [License](#license)
+  - [Thank You](#thank-you)
+  <!--toc:end-->
 
 ## Overview
 
@@ -25,19 +41,18 @@ follow these steps:
 ### 1. Clone the Repository
 
 ```bash
-git clone <https://github.com/yourusername/fasting-tracker-app.git>
+git clone <https://github.com/snikoletopoulos/fast-tracker.git>
 ```
 
 ### 2. Navigate to the Project Directory
 
 ```bash
-cd fasting-tracker-app
+cd fast-tracker
 ```
 
 ## Install Dependencies
 
-Use the package manager appropriate for your project (e.g., npm or yarn) to
-install the required dependencies.
+Use the pnpm to install the required dependencies.
 
 ```bash
 pnpm install
@@ -49,14 +64,14 @@ Use the following command to start the application in development:
 pnpm dev
 ```
 
-This will launch the application on your local development server. By default,
-the app should be accessible at <http://localhost:3000> in your web browser.
+This will launch the Apollo Server on your local development environment. By default,
+the app should be accessible at <http://localhost:4000> in your web browser.
 
 ## Usage
 
-The Fasting Tracker Mobile Application is built using React Native (for the
-mobile app) and React (for the web app). The codebase is organized into
-components, screens, and other relevant folders. To customize the app or extend
+The Fast Tracker Mobile Application is built using React Native (for the
+mobile app) and Apollo GraphQL Server (for the backend). The codebase is organized
+into components, screens, and other relevant folders. To customize the app or extend
 its features, you can explore and modify the source code according to your requirements.
 
 ## Contributing
@@ -83,7 +98,7 @@ follow these steps:
 ## Issues and Support
 
 If you encounter any issues with the application or have questions related to
-its development, please create a GitHub issue in this repository. We appreciate
+its development, please create a GitHub issue in this repository. I appreciate
 your feedback and will do our best to address any concerns.
 
 ## License
@@ -92,6 +107,6 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## Thank You
 
-Thank you for your interest in the Fasting Tracker Mobile Application. We hope this
+Thank you for your interest in the Fast Tracker Mobile Application. I hope this
 repository and application prove valuable for your fasting journey and development
 endeavors.
