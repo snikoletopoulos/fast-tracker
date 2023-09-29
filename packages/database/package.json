@@ -5,6 +5,7 @@
 		".": "./index.ts"
 	},
 	"types": "./index.ts",
+	"type": "module",
 	"scripts": {
 		"generate:types": "prisma generate",
 		"db:push": "prisma db push --skip-generate",
