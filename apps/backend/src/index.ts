@@ -3,6 +3,7 @@ import { resolve } from "path";
 import { ApolloServer } from "@apollo/server";
 import { startStandaloneServer } from "@apollo/server/standalone";
 
+import "modules/env";
 import * as resolvers from "resolvers";
 
 const typeDefs = readFileSync(resolve(process.cwd(), "src", "schema.graphql"), {
