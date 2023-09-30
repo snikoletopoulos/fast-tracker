@@ -23,6 +23,7 @@ export interface ApolloContext {
 const server = new ApolloServer<ApolloContext>({
 	typeDefs,
 	resolvers,
+	introspection: process.env.NODE_ENV === "development",
 });
 
 void (async () => {
