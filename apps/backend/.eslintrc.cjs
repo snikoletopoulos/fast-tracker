@@ -4,5 +4,11 @@ module.exports = {
 	ignorePatterns: ["src/types/graphql.ts"],
 	rules: {
 		"no-console": "off",
-	}
+		"node/no-unpublished-import": [
+			"error",
+			{
+				allowModules: ["@graphql-codegen/cli"],
+			},
+		],
+	},
 };
