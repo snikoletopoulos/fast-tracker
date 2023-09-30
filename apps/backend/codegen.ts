@@ -11,7 +11,7 @@ const config: CodegenConfig = {
 			plugins: [generatedTagPlugin, "typescript", "typescript-resolvers"],
 			config: {
 				useIndexSignature: true,
-				// contextType: '../index#MyContext',
+				contextType: "index#ApolloContext",
 			},
 		},
 	},
