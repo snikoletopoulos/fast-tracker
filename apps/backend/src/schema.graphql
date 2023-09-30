@@ -3,12 +3,12 @@ scalar DateTime
 type Query {
 	hello: String
 	fast(id: ID!): Fast!
-	fasts: [Fast!]!
+	fasts(userId: ID): [Fast!]!
 }
 
 type Mutation {
-	startFast(userId: ID!): Fast!
-	endFast(fastId: ID!): Fast!
+	startFast: Fast!
+	endFast: Fast!
 }
 
 type User {
@@ -22,4 +22,5 @@ type Fast {
 	startedAt: DateTime!
 	endedAt: DateTime
 	user: User!
+	createdAt: DateTime!
 }
