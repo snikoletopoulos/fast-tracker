@@ -9,10 +9,10 @@
 		"build": "dotenv -- turbo build",
 		"clean": "turbo clean && rm -rf node_modules",
 		"lint": "FORCE_COLOR=1 turbo run lint",
-		"format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\" --ignore-path .gitignore",
+		"format": "FORCE_COLOR=1 turbo run format",
 		"db:push": "dotenv -- turbo run db:push",
 		"generate:types": "turbo run generate:types",
-		"studio": "turbo run studio"
+		"studio": "dotenv -- turbo run studio"
 	},
 	"devDependencies": {
 		"@commitlint/cli": "^17.7.1",
