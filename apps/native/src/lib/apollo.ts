@@ -6,18 +6,21 @@ import {
 	HttpLink,
 } from "@apollo/client";
 import { loadErrorMessages, loadDevMessages } from "@apollo/client/dev";
+import * as SecureStore from "expo-secure-store";
+
+import { AUTH } from "constants/auth";
 
 if (__DEV__) {
 	loadDevMessages();
 	loadErrorMessages();
 }
 
-const TOKEN = "";
-
-export const authLink = new ApolloLink((operation, forward) => {
+// @ts-expect-error - Wrong apollo client type
+export const authLink = new ApolloLink(async (operation, forward) => {
+	const token = await SecureStore.getItemAsync(AUTH.jwtStorageKey);
 	operation.setContext({
 		headers: {
-			Authorization: `Bearer ${TOKEN}`,
+			Authorization: token,
 		},
 	});
 	return forward(operation);
