@@ -12,6 +12,12 @@ const config: CodegenConfig = {
 			config: {
 				useIndexSignature: true,
 				contextType: "index#ApolloContext",
+				mapperTypeSuffix: "Model",
+				showUnusedMappers: true,
+				mappers: {
+					Fast: "database#Fast",
+					User: "@clerk/clerk-sdk-node#User",
+				},
 			},
 		},
 	},
