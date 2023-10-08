@@ -1,6 +1,1 @@
-{
-	"language": "en",
-	"words": ["datasource", "codegen", "commitlint"],
-	"version": "0.2",
-	"flagWords": []
-}
+{"flagWords":[],"words":["datasource","codegen","commitlint","redash"],"version":"0.2","language":"en"}
