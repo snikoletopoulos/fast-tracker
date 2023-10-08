@@ -18,6 +18,10 @@ const config: CodegenConfig = {
 					Fast: "database#Fast",
 					User: "@clerk/clerk-sdk-node#User",
 				},
+				strictScalars: true,
+				scalars: {
+					DateTime: "Date",
+				},
 			},
 		},
 	},
