@@ -43,6 +43,9 @@ importers:
       jsonwebtoken:
         specifier: ^9.0.2
         version: 9.0.2
+      services:
+        specifier: workspace:*
+        version: link:../../packages/services
       zod:
         specifier: ^3.22.2
         version: 3.22.2
