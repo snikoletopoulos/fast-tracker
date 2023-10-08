@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { Text, TextInput, TouchableOpacity, View } from "react-native";
 import { useSignUp } from "@clerk/clerk-expo";
+import { SafeAreaView } from "react-native-safe-area-context";
+import { Link } from "expo-router";
 
-export const SignUpScreen = () => {
+const SignUpScreen = () => {
 	const { isLoaded, signUp, setActive } = useSignUp();
 
 	const [emailAddress, setEmailAddress] = useState("");
@@ -50,7 +52,9 @@ export const SignUpScreen = () => {
 	};
 
 	return (
-		<View>
+		<SafeAreaView
+			style={{ justifyContent: "center", alignItems: "center", flex: 1 }}
+		>
 			{!pendingVerification && (
 				<View>
 					<View>
@@ -91,6 +95,10 @@ export const SignUpScreen = () => {
 					</TouchableOpacity>
 				</View>
 			)}
-		</View>
+
+			<Link href="/sign-in">Log in</Link>
+		</SafeAreaView>
 	);
 };
+
+export default SignUpScreen;

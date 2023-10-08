@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { Text, TextInput, TouchableOpacity, View } from "react-native";
 import { useSignIn } from "@clerk/clerk-expo";
+import { SafeAreaView } from "react-native-safe-area-context";
+import { Link } from "expo-router";
 
-export const SignInScreen = () => {
+const SignInScreen = () => {
 	const { signIn, setActive, isLoaded } = useSignIn();
 
 	const [emailAddress, setEmailAddress] = useState("");
@@ -26,7 +28,9 @@ export const SignInScreen = () => {
 		}
 	};
 	return (
-		<View>
+		<SafeAreaView
+			style={{ justifyContent: "center", alignItems: "center", flex: 1 }}
+		>
 			<View>
 				<TextInput
 					autoCapitalize="none"
@@ -48,6 +52,10 @@ export const SignInScreen = () => {
 			<TouchableOpacity onPress={onSignInPress}>
 				<Text>Sign in</Text>
 			</TouchableOpacity>
-		</View>
+
+			<Link href="/sign-up">Register</Link>
+		</SafeAreaView>
 	);
 };
+
+export default SignInScreen;

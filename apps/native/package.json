@@ -1,9 +1,8 @@
 {
 	"name": "native",
 	"version": "1.0.0",
-	"main": "index.js",
+	"main": "expo-router/entry",
 	"scripts": {
-		"start": "expo start",
 		"dev": "expo start",
 		"android": "expo start --android",
 		"ios": "expo start --ios",
@@ -17,6 +16,8 @@
 		"expo-auth-session": "~5.0.2",
 		"expo-constants": "~14.4.2",
 		"expo-crypto": "~12.4.1",
+		"expo-linking": "~5.0.2",
+		"expo-router": "^2.0.0",
 		"expo-secure-store": "~12.3.1",
 		"expo-status-bar": "~1.6.0",
 		"graphql": "^16.8.1",
