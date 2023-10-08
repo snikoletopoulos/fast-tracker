@@ -7,8 +7,8 @@ type Query {
 }
 
 type Mutation {
-	startFast: Fast!
-	endFast: Fast!
+	startFast(options: StartFastInput): Fast!
+	finishFast(options: FinishFastInput): Fast!
 }
 
 type User {
@@ -27,4 +27,12 @@ type Fast {
 	endedAt: DateTime
 	user: User!
 	createdAt: DateTime!
+}
+
+input StartFastInput {
+	startedAt: DateTime!
+}
+
+input FinishFastInput {
+	endedAt: DateTime!
 }
