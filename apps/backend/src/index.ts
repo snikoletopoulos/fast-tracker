@@ -6,9 +6,9 @@ import { type User } from "@clerk/clerk-sdk-node";
 import { GraphQLError } from "graphql";
 import { z } from "zod";
 
-import "modules/env";
+import "lib/env";
 import * as resolvers from "resolvers";
-import { parseJWT } from "modules/auth";
+import { parseJWT } from "helpers/auth";
 import { clerkClient } from "lib/clerk";
 
 const typeDefs = readFileSync(resolve(process.cwd(), "src", "schema.graphql"), {
